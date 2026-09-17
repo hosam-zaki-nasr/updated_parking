@@ -126,9 +126,11 @@ return [
 
     'sms_url' => env('SMS_URL', 'https://api.oursms.com/msgs/sms'),
     'sms_token' => env('SMS_TOKEN', 'lNPo66zSa-8TPbXcoGfI'),
-    // 'google_application_credentials' => public_path('/') . '/google/vpm-systems-firebase-adminsdk-pik2l-6cee99c75c.json',
+
 
     'google_application_credentials' => env('GOOGLE_APPLICATION_CREDENTIALS'),
+    // 'google_application_credentials' => storage_path('app/keys/firebase.json'),
+    // 'google_application_credentials' => public_path('/') . '/google/vpm-systems-firebase-adminsdk-pik2l-6cee99c75c.json',
 
 
 ];
