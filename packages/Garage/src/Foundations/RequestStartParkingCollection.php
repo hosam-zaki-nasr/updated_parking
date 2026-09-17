@@ -2,11 +2,11 @@
 
 namespace Garage\Foundations;
 
-use App\Constants\IdentificationType;
+use Garage\Http\Requests\RequestStartParkingRequest;
 
 class RequestStartParkingCollection
 {
-    public static function requestStartParking($request)
+    public static function requestStartParking(RequestStartParkingRequest $request)
     {
         $data = $request->attributes->get('middleware_data');
 

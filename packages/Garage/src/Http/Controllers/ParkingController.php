@@ -18,8 +18,6 @@ class ParkingController extends Controller
 
     public function requestStartParking(RequestStartParkingRequest $request)
     {
-        Log::info($request->validated());
-
         $parking = RequestStartParkingCollection::requestStartParking($request);
 
         return isset($parking['error_response']) ? $parking['error_response'] : $parking;

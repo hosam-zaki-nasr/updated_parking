@@ -7,10 +7,8 @@ use App\Models\Parking;
 class DetermineParkingCollection
 {
 
-    public static function determineParkedCar(
-        $garage_id,
-        $user_id,
-    ) {
+    public static function determineParkedCar(string $garage_id, string $user_id)
+    {
         return Parking::where('garage_id', $garage_id)
 
             ->where('user_id', $user_id)

@@ -53,8 +53,6 @@ class RequestStartParkingMiddleware
 
             if ($car['status'] == false) {
 
-                Log::error($car);
-
                 return response()->json($car, StatusCode::OK);
             }
             $car = $car['data'];
@@ -65,20 +63,10 @@ class RequestStartParkingMiddleware
 
             if ($user['status'] == false) {
 
-                Log::error($user);
-
                 return response()->json($user, StatusCode::OK);
             }
             $user_id = $user['data']->id;
         } else {
-
-            Log::error([
-                'status' => false,
-                'error_response' => [
-                    'Status' => 'Unauthorized',
-                    'UnauthorizedReason' => 'AccessRefused',
-                ],
-            ]);
 
             return response()->json([
                 "status" => false,
@@ -94,7 +82,6 @@ class RequestStartParkingMiddleware
 
         if ($parking['status'] == false) {
 
-            Log::error($parking);
             return response()->json($parking, StatusCode::OK);
         }
 
@@ -103,7 +90,7 @@ class RequestStartParkingMiddleware
         $financeStatus = self::validateIfHasSubscriptionOrNotEmptyWallet($user, $garage);
 
         if ($financeStatus['status'] == false) {
-            Log::error($financeStatus);
+
             return response()->json($financeStatus, StatusCode::OK);
         }
 
@@ -118,7 +105,7 @@ class RequestStartParkingMiddleware
         return $next($request);
     }
 
-    public static function validateCarExists($car_number)
+    public static function validateCarExists(string $car_number)
     {
         $car = Car::where('full_number', $car_number)->first();
 
@@ -136,14 +123,12 @@ class RequestStartParkingMiddleware
                     'UnauthorizedReason' => 'UnknownIdentification',
                 ],
             ];
-
-            Log::error($data);
         }
 
         return $data;
     }
 
-    public static function validateUserExists($qr_id)
+    public static function validateUserExists(string $qr_id)
     {
         $user = User::where('id', $qr_id)->orWhere('qr_id', $qr_id)->first();
 
@@ -161,17 +146,13 @@ class RequestStartParkingMiddleware
                     'UnauthorizedReason' => 'UnknownIdentification',
                 ],
             ];
-
-            Log::error($data);
         }
 
         return $data;
     }
 
-    public static function validateParkingExists(
-        $garage_id,
-        $user_id,
-    ) {
+    public static function validateParkingExists(string $garage_id, string $user_id)
+    {
 
         $parking = DetermineParkingCollection::determineParkedCar(
             $garage_id,
@@ -192,8 +173,6 @@ class RequestStartParkingMiddleware
                     'UnauthorizedReason' => 'WrongCycle',
                 ],
             ];
-
-            Log::error($data);
         }
 
         return $data;
@@ -230,14 +209,6 @@ class RequestStartParkingMiddleware
         }
 
         if ($errors == 2) {
-
-            Log::error([
-                'status' => false,
-                'error_response' => [
-                    'Status' => 'Unauthorized',
-                    'UnauthorizedReason' => 'MaxAmountReached',
-                ],
-            ]);
 
             return [
                 'status' => false,

@@ -4,10 +4,11 @@ namespace Garage\Foundations;
 
 use App\Models\Parking;
 use Carbon\Carbon;
+use Garage\Http\Requests\ParkingCreateRequest;
 
 class ParkingCreateCollection
 {
-    public static function createParking($request)
+    public static function createParking(ParkingCreateRequest $request)
     {
         $validated = $request->validated();
 

@@ -10,10 +10,11 @@ use App\Models\Subscription;
 use App\Models\User;
 use Carbon\Carbon;
 use App\Constants\SystemDefault;
+use Garage\Http\Requests\ParkingEndRequest;
 
 class ParkingEndCollection
 {
-    public static function endParking($request)
+    public static function endParking(ParkingEndRequest $request)
     {
         $validated = $request->validated();
 

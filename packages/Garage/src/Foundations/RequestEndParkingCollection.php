@@ -6,10 +6,11 @@ use App\Constants\IdentificationType;
 use App\Models\Car;
 use App\Models\Garage;
 use App\Models\User;
+use Garage\Http\Requests\RequestEndParkingRequest;
 
 class RequestEndParkingCollection
 {
-    public static function requestEndParking($request)
+    public static function requestEndParking(RequestEndParkingRequest $request)
     {
         $validated = $request->validated();
 
@@ -73,7 +74,7 @@ class RequestEndParkingCollection
         ];
     }
 
-    public static function validateCarExists($car_number)
+    public static function validateCarExists(string $car_number)
     {
         $car = Car::where('full_number', $car_number)->first();
 
@@ -96,7 +97,7 @@ class RequestEndParkingCollection
         return $data;
     }
 
-    public static function validateUserExists($qr_id)
+    public static function validateUserExists(string $qr_id)
     {
         $user = User::where('id', $qr_id)->orWhere('qr_id', $qr_id)->first();
 
