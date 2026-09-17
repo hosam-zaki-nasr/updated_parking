@@ -1,0 +1,15 @@
+{
+    "name": "laravel/customer",
+    "description": "customer package",
+    "autoload": {
+        "psr-4": {
+            "Laravel\\Customer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hosam Zaki"
+        }
+    ],
+    "require": {}
+}

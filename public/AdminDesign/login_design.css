@@ -1,0 +1,92 @@
+body,
+b,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+a,
+label,
+li,
+input,
+div,
+button,
+input,
+form {
+    font-family: "Cairo";
+}
+
+body {
+    background-color: #ffffff !important;
+}
+
+.login-box-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 60%;
+    min-height: auto;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 8px;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    row-gap: 20px !important;
+    padding-bottom:50px;
+}
+.login_logo {
+    width: 35%;
+    padding: 10px;
+    margin-top: 50px;
+    border-radius: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.login-box-body p {
+    font-size: 20px;
+    padding: 25px;
+    font-weight: 700;
+}
+
+.has-feedback .form-control {
+    direction: ltr;
+    padding-left: 10px !important;
+    min-width: 300px;
+    min-height: 50px !important;
+    font-size: 16px !important;
+    text-align: center !important;
+
+    background-color: #fff !important;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 7px 0 rgba(0, 0, 0, 0.19);
+}
+.login-box-body .form-control-feedback,
+.register-box-body .form-control-feedback {
+    color:  #0a5563  !important ;
+    font-size: 20px;
+    top:7px;
+}
+
+.btn-primary {
+    min-width:300px !important;
+    border: none !important;
+    color: #fff !important;
+    background-color: #0a5563 !important;
+    border: none !important;
+    border-radius: 5px !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+    font-size: large !important;
+    font-weight: 500 !important;}
+
+.btn-primary:hover {
+  border: none !important;
+    color:#0a5563  !important;
+    background-color: #f7ef31 !important;
+    border: none !important;
+    border-radius: 5px !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+    font-size: large !important;
+    font-weight: 500 !important;
+
+}

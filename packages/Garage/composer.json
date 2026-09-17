@@ -1,0 +1,15 @@
+{
+    "name": "laravel/garage",
+    "description": "garage package",
+    "autoload": {
+        "psr-4": {
+            "Laravel\\Garage\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hosam Zaki"
+        }
+    ],
+    "require": {}
+}

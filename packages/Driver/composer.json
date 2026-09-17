@@ -1,0 +1,16 @@
+{
+    "name": "laravel/driver",
+    "description": "driver package",
+    "type": "n",
+    "autoload": {
+        "psr-4": {
+            "Laravel\\Driver\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hosam Zaki"
+        }
+    ],
+    "require": {}
+}
