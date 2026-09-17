@@ -11,7 +11,7 @@ use App\Models\User;
 use App\Models\UserNotificationToken;
 use Dashboard\Http\Resources\Customer\CustomerMinifiedResource;
 use Dashboard\Http\Resources\ValetDriver\ValetDriverMinifiedResource;
-use Google_Client;
+use Google\Client;
 use Illuminate\Support\Facades\Log;
 
 class NotificationCollection
@@ -135,7 +135,7 @@ class NotificationCollection
 
         $customData = self::prepareCustomData($customData);
 
-        $client = new Google_Client();
+        $client = new Client();
         $client->setAuthConfig(config('app.google_application_credentials'));
         $client->addScope('https://www.googleapis.com/auth/firebase.messaging');
 
