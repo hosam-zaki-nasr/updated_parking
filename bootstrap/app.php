@@ -15,6 +15,8 @@ $app = Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware): void {
         $middleware->alias([
+
+            'is_verified' => \App\Http\Middleware\EnsureEmailIsVerified::class,
             'auth_api' => \App\Http\Middleware\Api::class,
             'customer' => \Customer\Http\Middleware\CheckAccountTypeCustomerMiddleware::class,
             'preventIfContact' => \Customer\Http\Middleware\PreventIfContactMiddleware::class,
