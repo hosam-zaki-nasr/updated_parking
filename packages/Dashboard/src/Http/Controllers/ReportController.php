@@ -45,7 +45,7 @@ class ReportController extends Controller
             $request->get('query_string') ? $request->get('query_string') : -1,
 
             $request->get('paginate') ?? -1,
-            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAUL_PAGINATION_COUNT
+            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAULT_PAGINATION_COUNT
         );
 
         return response()->paginated(GarageMinifiedResource::collection($garages));
@@ -67,7 +67,7 @@ class ReportController extends Controller
             $request->get('query_string') ? $request->get('query_string') : -1,
 
             $request->get('paginate') ?? -1,
-            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAUL_PAGINATION_COUNT
+            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAULT_PAGINATION_COUNT
         );
 
         return response()->paginated(ParkingResource::collection($garages));
@@ -83,7 +83,7 @@ class ReportController extends Controller
             $request->get('date_to') ? $request->get('date_to') : -1,
 
             $request->get('paginate') ?? -1,
-            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAUL_PAGINATION_COUNT
+            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAULT_PAGINATION_COUNT
         );
 
         return response()->paginated(CustomerMinifiedResource::collection($customers));
@@ -100,7 +100,7 @@ class ReportController extends Controller
             $request->get('date_to') ? $request->get('date_to') : -1,
 
             $request->get('paginate') ?? -1,
-            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAUL_PAGINATION_COUNT
+            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAULT_PAGINATION_COUNT
         );
 
         return response()->paginated(ContactMinifiedResource::collection($contacts));
@@ -118,7 +118,7 @@ class ReportController extends Controller
             $request->get('car_type_id') ? $request->get('car_type_id') : -1,
 
             $request->get('paginate') ?? -1,
-            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAUL_PAGINATION_COUNT
+            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAULT_PAGINATION_COUNT
         );
 
         return response()->paginated(CarMinifiedResource::collection($cars));
@@ -135,7 +135,7 @@ class ReportController extends Controller
             $request->get('date_to') ? $request->get('date_to') : -1,
 
             $request->get('paginate') ?? -1,
-            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAUL_PAGINATION_COUNT
+            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAULT_PAGINATION_COUNT
         );
 
         return response()->paginated(ValetDriverMinifiedResource::collection($drivers));
@@ -152,7 +152,7 @@ class ReportController extends Controller
             $request->get('deleted_at') !== null ? $request->get('deleted_at') : -1,
 
             $request->get('paginate') ?? -1,
-            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAUL_PAGINATION_COUNT
+            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAULT_PAGINATION_COUNT
         );
 
         return response()->paginated(SubscriptionMinifiedResource::collection($drivers));

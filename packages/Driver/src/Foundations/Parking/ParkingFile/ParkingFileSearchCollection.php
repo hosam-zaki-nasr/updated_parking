@@ -11,7 +11,7 @@ class ParkingFileSearchCollection
     public static function searchParkingFiles(
         Parking $parking,
         $paginate = -1,
-        $per_page = SystemDefault::DEFAUL_PAGINATION_COUNT
+        $per_page = SystemDefault::DEFAULT_PAGINATION_COUNT
     ) {
         $parking = ParkingFileQueryCollection::searchAllParkingFiles($parking);
 

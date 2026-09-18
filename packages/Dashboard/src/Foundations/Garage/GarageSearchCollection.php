@@ -13,7 +13,7 @@ class GarageSearchCollection
         $query_string = -1,
         $site_number = -1,
         $paginate = -1,
-        $per_page = SystemDefault::DEFAUL_PAGINATION_COUNT
+        $per_page = SystemDefault::DEFAULT_PAGINATION_COUNT
     ) {
         $garages = GarageQueryCollection::searchAllGarages(
             $country_id,

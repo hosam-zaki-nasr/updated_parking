@@ -9,7 +9,7 @@ class CountrySearchCollection
     public static function searchCountries(
         $query_string = -1,
         $paginate = -1,
-        $per_page = SystemDefault::DEFAUL_PAGINATION_COUNT
+        $per_page = SystemDefault::DEFAULT_PAGINATION_COUNT
     ) {
         $countries = CountryQueryCollection::searchAllCountries($query_string);
 

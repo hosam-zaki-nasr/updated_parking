@@ -13,7 +13,7 @@ class ParkingSearchCollection
         $ends_at = -1,
         $period = -1,
         $paginate = -1,
-        $per_page = SystemDefault::DEFAUL_PAGINATION_COUNT
+        $per_page = SystemDefault::DEFAULT_PAGINATION_COUNT
     ) {
         $parking = ParkingQueryCollection::searchAllParkings(
             $status,

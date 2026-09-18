@@ -9,7 +9,7 @@ class ValetManagerSearchCollection
     public static function searchValetManagers(
         $query_string = -1,
         $paginate = -1,
-        $per_page = SystemDefault::DEFAUL_PAGINATION_COUNT
+        $per_page = SystemDefault::DEFAULT_PAGINATION_COUNT
     ) {
         $valetManagers = ValetManagerQueryCollection::searchAllValetManagers(
             $query_string

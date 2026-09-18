@@ -21,7 +21,7 @@ class SubscriptionCreateCollection
 
         $validated['ends_at'] = Carbon::createFromDate($validated['starts_at'])->addMonths(1);
 
-        $validated['amount'] = $garage && $garage->subscription_price ? $garage->subscription_price : SystemDefault::DEFAUL_SUBSCRIPTION_VALUE;
+        $validated['amount'] = $garage && $garage->subscription_price ? $garage->subscription_price : SystemDefault::DEFAULT_SUBSCRIPTION_VALUE;
 
         $validated['auto_renew'] = true;
 

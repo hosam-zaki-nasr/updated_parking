@@ -15,7 +15,7 @@ class SubscriptionSearchCollection
         $is_active = -1,
         $deleted_at = -1,
         $paginate = -1,
-        $per_page = SystemDefault::DEFAUL_PAGINATION_COUNT
+        $per_page = SystemDefault::DEFAULT_PAGINATION_COUNT
     ) {
         $subscriptions = SubscriptionQueryCollection::searchAllSubscriptionReports(
             $user_id,

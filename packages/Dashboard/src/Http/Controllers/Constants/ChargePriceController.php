@@ -19,7 +19,7 @@ class ChargePriceController extends Controller
     {
         $chargePrices = ChargePriceSearchCollection::searchChargePrices(
             $request->get('paginate') ?? -1,
-            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAUL_PAGINATION_COUNT
+            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAULT_PAGINATION_COUNT
         );
 
         return response()->paginated(ChargePriceMinifiedResource::collection($chargePrices));

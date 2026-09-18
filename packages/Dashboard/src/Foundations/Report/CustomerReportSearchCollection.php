@@ -13,7 +13,7 @@ class CustomerReportSearchCollection
         $date_from = -1,
         $date_to = -1,
         $paginate = -1,
-        $per_page = SystemDefault::DEFAUL_PAGINATION_COUNT
+        $per_page = SystemDefault::DEFAULT_PAGINATION_COUNT
     ) {
         $customers = CustomerReportQueryCollection::searchAllCustomerReports(
             $query_string,

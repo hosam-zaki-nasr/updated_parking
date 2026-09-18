@@ -9,7 +9,7 @@ class FileSearchCollection
 {
     public static function searchFiles(
         $paginate = -1,
-        $per_page = SystemDefault::DEFAUL_PAGINATION_COUNT,
+        $per_page = SystemDefault::DEFAULT_PAGINATION_COUNT,
     ) {
         $users = FileQueryCollection::searchAllFiles();
 

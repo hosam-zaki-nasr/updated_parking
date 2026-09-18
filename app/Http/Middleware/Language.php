@@ -25,7 +25,7 @@ class Language
 
             AllowedLanguages::ARABIC['key']
 
-        ], true) ? $localization : SystemDefault::DEFAUL_LANGUAGE;
+        ], true) ? $localization : SystemDefault::DEFAULT_LANGUAGE;
 
         app()->setLocale($localization);
 

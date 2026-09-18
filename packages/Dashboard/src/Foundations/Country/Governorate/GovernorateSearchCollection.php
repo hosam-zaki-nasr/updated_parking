@@ -11,7 +11,7 @@ class GovernorateSearchCollection
         Country $country,
         $query_string = -1,
         $paginate = -1,
-        $per_page = SystemDefault::DEFAUL_PAGINATION_COUNT
+        $per_page = SystemDefault::DEFAULT_PAGINATION_COUNT
     ) {
         $governorates = GovernorateQueryCollection::searchCountryGovernorates(
             $country,
@@ -31,7 +31,7 @@ class GovernorateSearchCollection
         $country_id,
         $query_string = -1,
         $paginate = -1,
-        $per_page = SystemDefault::DEFAUL_PAGINATION_COUNT
+        $per_page = SystemDefault::DEFAULT_PAGINATION_COUNT
     ) {
         $governorates = GovernorateQueryCollection::searchAllGovernorates(
             $country_id,

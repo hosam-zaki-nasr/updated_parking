@@ -7,13 +7,13 @@ use App\Constants\SystemDefault;
 class GarageSearchCollection
 {
     public static function searchGarages(
-        $radius = SystemDefault::DEFAUL_RADIUS_VALUE,
+        $radius = SystemDefault::DEFAULT_RADIUS_VALUE,
         $longitude = -1,
         $latitude = -1,
         $query_string = -1,
         $type_id = -1,
         $paginate = -1,
-        $per_page = SystemDefault::DEFAUL_PAGINATION_COUNT
+        $per_page = SystemDefault::DEFAULT_PAGINATION_COUNT
     ) {
         $garages = GarageQueryCollection::searchAllGarages(
             $radius,
@@ -36,7 +36,7 @@ class GarageSearchCollection
         $governorate_id = -1,
         $query_string = -1,
         $paginate = -1,
-        $per_page = SystemDefault::DEFAUL_PAGINATION_COUNT
+        $per_page = SystemDefault::DEFAULT_PAGINATION_COUNT
     ) {
         $garages = GarageQueryCollection::searchAllParkingGarages(
             $country_id,

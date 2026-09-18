@@ -20,7 +20,7 @@ class GarageReportSearchCollection
         $query_string = -1,
 
         $paginate = -1,
-        $per_page = SystemDefault::DEFAUL_PAGINATION_COUNT
+        $per_page = SystemDefault::DEFAULT_PAGINATION_COUNT
     ) {
         $garages = GarageReportQueryCollection::searchAllGarageReports(
             $garage_id,

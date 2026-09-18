@@ -20,7 +20,7 @@ class CarController extends Controller
         $cars = CarSearchCollection::searchCars(
             -1,
             $request->get('paginate') ?? -1,
-            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAUL_PAGINATION_COUNT
+            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAULT_PAGINATION_COUNT
         );
 
         return response()->paginated(CarMinifiedResource::collection($cars));
@@ -31,7 +31,7 @@ class CarController extends Controller
         $cars = CarSearchCollection::searchCars(
             $request->get('query_string') ? $request->get('query_string') : -1,
             $request->get('paginate') ?? -1,
-            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAUL_PAGINATION_COUNT
+            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAULT_PAGINATION_COUNT
         );
 
         return response()->paginated(CarMinifiedResource::collection($cars));

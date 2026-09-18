@@ -11,7 +11,7 @@ class CitySearchCollection
         Country $country,
         $query_string = -1,
         $paginate = -1,
-        $per_page = SystemDefault::DEFAUL_PAGINATION_COUNT
+        $per_page = SystemDefault::DEFAULT_PAGINATION_COUNT
     ) {
         $cities = CityQueryCollection::searchCountryCities(
             $country,
@@ -31,7 +31,7 @@ class CitySearchCollection
         $country_id,
         $query_string = -1,
         $paginate = -1,
-        $per_page = SystemDefault::DEFAUL_PAGINATION_COUNT
+        $per_page = SystemDefault::DEFAULT_PAGINATION_COUNT
     ) {
         $cities = CityQueryCollection::searchAllCities(
             $country_id,

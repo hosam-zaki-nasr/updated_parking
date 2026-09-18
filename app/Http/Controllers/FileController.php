@@ -19,7 +19,7 @@ class FileController extends Controller
     {
         $files = FileSearchCollection::searchFiles(
             $request->get('paginate') ?? -1,
-            $request->get('per_page') ?? SystemDefault::DEFAUL_PAGINATION_COUNT
+            $request->get('per_page') ?? SystemDefault::DEFAULT_PAGINATION_COUNT
         );
 
         return response()->paginated(

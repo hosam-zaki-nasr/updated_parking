@@ -14,7 +14,7 @@ class DriverReportSearchCollection
         $date_from = -1,
         $date_to = -1,
         $paginate = -1,
-        $per_page = SystemDefault::DEFAUL_PAGINATION_COUNT
+        $per_page = SystemDefault::DEFAULT_PAGINATION_COUNT
     ) {
         $drivers = DriverReportQueryCollection::searchAllDriverReports(
             $query_string,

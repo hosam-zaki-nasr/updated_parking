@@ -21,7 +21,7 @@ class AdminController extends Controller
         $admins = AdminSearchCollection::searchAdmins(
             -1,
             $request->get('paginate') ?? -1,
-            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAUL_PAGINATION_COUNT
+            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAULT_PAGINATION_COUNT
         );
 
         return response()->paginated(AdminMinifiedResource::collection($admins));
@@ -32,7 +32,7 @@ class AdminController extends Controller
         $admins = AdminSearchCollection::searchAdmins(
             $request->get('query_string') ? $request->get('query_string') : -1,
             $request->get('paginate') ?? -1,
-            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAUL_PAGINATION_COUNT
+            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAULT_PAGINATION_COUNT
         );
 
         return response()->paginated(AdminMinifiedResource::collection($admins));

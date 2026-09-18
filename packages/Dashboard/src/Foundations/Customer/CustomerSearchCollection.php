@@ -9,7 +9,7 @@ class CustomerSearchCollection
     public static function searchCustomers(
         $query_string = -1,
         $paginate = -1,
-        $per_page = SystemDefault::DEFAUL_PAGINATION_COUNT
+        $per_page = SystemDefault::DEFAULT_PAGINATION_COUNT
     ) {
         $customers = CustomerQueryCollection::searchAllCustomers(
             $query_string

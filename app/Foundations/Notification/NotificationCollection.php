@@ -82,7 +82,7 @@ class NotificationCollection
 
     final static public function getUserNotifications(
         $user_id,
-        $per_page = SystemDefault::DEFAUL_PAGINATION_COUNT
+        $per_page = SystemDefault::DEFAULT_PAGINATION_COUNT
     ) {
 
         return Notification::whereHas('recipients', function ($q) use ($user_id) {

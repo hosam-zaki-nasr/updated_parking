@@ -15,7 +15,7 @@ class CarReportSearchCollection
         $car_color_id = -1,
         $car_type_id = -1,
         $paginate = -1,
-        $per_page = SystemDefault::DEFAUL_PAGINATION_COUNT
+        $per_page = SystemDefault::DEFAULT_PAGINATION_COUNT
     ) {
         $cars = CarReportQueryCollection::searchAllCarReports(
             $customer_id,

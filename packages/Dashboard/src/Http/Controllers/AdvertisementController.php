@@ -20,7 +20,7 @@ class AdvertisementController extends Controller
         $advertisements = AdvertisementSearchCollection::searchAdvertisements(
             -1,
             $request->get('paginate') ?? -1,
-            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAUL_PAGINATION_COUNT
+            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAULT_PAGINATION_COUNT
         );
 
         return response()->paginated(AdvertisementMinifiedResource::collection($advertisements));
@@ -31,7 +31,7 @@ class AdvertisementController extends Controller
         $advertisements = AdvertisementSearchCollection::searchAdvertisements(
             $request->get('query_string') ? $request->get('query_string') : -1,
             $request->get('paginate') ?? -1,
-            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAUL_PAGINATION_COUNT
+            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAULT_PAGINATION_COUNT
         );
 
         return response()->paginated(AdvertisementMinifiedResource::collection($advertisements));

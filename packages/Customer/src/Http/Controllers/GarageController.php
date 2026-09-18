@@ -22,7 +22,7 @@ class GarageController extends Controller
             -1,
             -1,
             $request->get('paginate') ?? -1,
-            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAUL_PAGINATION_COUNT
+            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAULT_PAGINATION_COUNT
         );
 
         return response()->paginated(GarageMinifiedResource::collection($garages));
@@ -31,13 +31,13 @@ class GarageController extends Controller
     public function search(Request $request)
     {
         $garages = GarageSearchCollection::searchGarages(
-            $request->get('radius') ? $request->get('radius') : SystemDefault::DEFAUL_RADIUS_VALUE,
+            $request->get('radius') ? $request->get('radius') : SystemDefault::DEFAULT_RADIUS_VALUE,
             $request->get('longitude') ? $request->get('longitude') : -1,
             $request->get('latitude') ? $request->get('latitude') : -1,
             $request->get('query_string') ? $request->get('query_string') : -1,
             $request->get('type_id') ? $request->get('type_id') : -1,
             $request->get('paginate') ?? -1,
-            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAUL_PAGINATION_COUNT
+            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAULT_PAGINATION_COUNT
         );
 
         return response()->paginated(GarageMinifiedResource::collection($garages));
@@ -50,7 +50,7 @@ class GarageController extends Controller
             $request->get('governorate_id') ? $request->get('governorate_id') : -1,
             $request->get('query_string') ? $request->get('query_string') : -1,
             $request->get('paginate') ?? -1,
-            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAUL_PAGINATION_COUNT
+            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAULT_PAGINATION_COUNT
         );
 
         return response()->paginated(GarageMinifiedResource::collection($garages));

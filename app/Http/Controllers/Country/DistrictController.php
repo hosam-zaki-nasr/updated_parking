@@ -20,7 +20,7 @@ class DistrictController extends Controller
             $country,
             -1,
             $request->get('paginate') ?? -1,
-            $request->get('per_page') ?? SystemDefault::DEFAUL_PAGINATION_COUNT
+            $request->get('per_page') ?? SystemDefault::DEFAULT_PAGINATION_COUNT
         );
 
         return response()->paginated(DistrictMinifiedResource::collection($districts));
@@ -32,7 +32,7 @@ class DistrictController extends Controller
             $country,
             $request->get('query_string') ?? -1,
             $request->get('paginate') ?? -1,
-            $request->get('per_page') ?? SystemDefault::DEFAUL_PAGINATION_COUNT
+            $request->get('per_page') ?? SystemDefault::DEFAULT_PAGINATION_COUNT
         );
 
         return response()->paginated(DistrictMinifiedResource::collection($districts));
@@ -44,7 +44,7 @@ class DistrictController extends Controller
             $request->get('country_id') ?? -1,
             $request->get('query_string') ?? -1,
             $request->get('paginate') ?? -1,
-            $request->get('per_page') ?? SystemDefault::DEFAUL_PAGINATION_COUNT
+            $request->get('per_page') ?? SystemDefault::DEFAULT_PAGINATION_COUNT
         );
 
         return response()->paginated(DistrictMinifiedResource::collection($districts));

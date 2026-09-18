@@ -10,7 +10,7 @@ class RequestDriverSearchCollection
         $status_id = -1,
         $driver_id = -1,
         $paginate = -1,
-        $per_page = SystemDefault::DEFAUL_PAGINATION_COUNT
+        $per_page = SystemDefault::DEFAULT_PAGINATION_COUNT
     ) {
         $requestDrivers = RequestDriverQueryCollection::searchAllRequestDrivers(
             $status_id,

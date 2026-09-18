@@ -22,7 +22,7 @@ class ValetDriverController extends Controller
             -1,
             -1,
             $request->get('paginate') ?? -1,
-            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAUL_PAGINATION_COUNT
+            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAULT_PAGINATION_COUNT
         );
 
         return response()->paginated(ValetDriverMinifiedResource::collection($valetDrivers));
@@ -34,7 +34,7 @@ class ValetDriverController extends Controller
             $request->get('garage_id') ? $request->get('garage_id') : -1,
             $request->get('query_string') ? $request->get('query_string') : -1,
             $request->get('paginate') ?? -1,
-            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAUL_PAGINATION_COUNT
+            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAULT_PAGINATION_COUNT
         );
 
         return response()->paginated(ValetDriverMinifiedResource::collection($valetDrivers));

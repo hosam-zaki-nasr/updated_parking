@@ -23,7 +23,7 @@ class SubscriptionController extends Controller
             $request->get('starts_at') ? $request->get('starts_at') : -1,
             $request->get('ends_at') ? $request->get('ends_at') : -1,
             $request->get('paginate') ?? -1,
-            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAUL_PAGINATION_COUNT
+            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAULT_PAGINATION_COUNT
         );
 
         return response()->paginated(SubscriptionMinifiedResource::collection($subscriptions));

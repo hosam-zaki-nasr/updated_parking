@@ -20,7 +20,7 @@ class RequestDriverController extends Controller
         $requestDrivers = RequestDriverSearchCollection::searchRequestDrivers(
             -1,
             $request->get('paginate') ?? -1,
-            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAUL_PAGINATION_COUNT
+            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAULT_PAGINATION_COUNT
         );
 
         return response()->paginated(RequestDriverMinifiedResource::collection($requestDrivers));
@@ -31,7 +31,7 @@ class RequestDriverController extends Controller
         $requestDrivers = RequestDriverSearchCollection::searchRequestDrivers(
             $request->get('query_string') ? $request->get('query_string') : -1,
             $request->get('paginate') ?? -1,
-            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAUL_PAGINATION_COUNT
+            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAULT_PAGINATION_COUNT
         );
 
         return response()->paginated(RequestDriverMinifiedResource::collection($requestDrivers));

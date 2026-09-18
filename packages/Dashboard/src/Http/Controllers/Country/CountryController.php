@@ -20,7 +20,7 @@ class CountryController extends Controller
         $countries = CountrySearchCollection::searchCountries(
             -1,
             $request->get('paginate') ?? -1,
-            $request->get('per_page') ?? SystemDefault::DEFAUL_PAGINATION_COUNT
+            $request->get('per_page') ?? SystemDefault::DEFAULT_PAGINATION_COUNT
         );
 
         return response()->paginated(CountryMinifiedResource::collection($countries));
@@ -31,7 +31,7 @@ class CountryController extends Controller
         $countries = CountrySearchCollection::searchCountries(
             $request->get('query_string') ? $request->get('query_string') : -1,
             $request->get('paginate') ?? -1,
-            $request->get('per_page') ?? SystemDefault::DEFAUL_PAGINATION_COUNT
+            $request->get('per_page') ?? SystemDefault::DEFAULT_PAGINATION_COUNT
         );
 
         return response()->paginated(CountryMinifiedResource::collection($countries));

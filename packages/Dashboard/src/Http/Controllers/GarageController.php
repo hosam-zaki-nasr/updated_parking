@@ -24,7 +24,7 @@ class GarageController extends Controller
             -1,
             -1,
             $request->get('paginate') ?? -1,
-            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAUL_PAGINATION_COUNT
+            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAULT_PAGINATION_COUNT
         );
 
         return response()->paginated(GarageMinifiedResource::collection($garages));
@@ -39,7 +39,7 @@ class GarageController extends Controller
             $request->get('query_string') ? $request->get('query_string') : -1,
             $request->get('site_number') ? $request->get('site_number') : -1,
             $request->get('paginate') ?? -1,
-            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAUL_PAGINATION_COUNT
+            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAULT_PAGINATION_COUNT
         );
 
         return response()->paginated(GarageMinifiedResource::collection($garages));

@@ -8,7 +8,7 @@ class ChargePriceSearchCollection
 {
     public static function searchChargePrices(
         $paginate = -1,
-        $per_page = SystemDefault::DEFAUL_PAGINATION_COUNT
+        $per_page = SystemDefault::DEFAULT_PAGINATION_COUNT
     )
     {
 

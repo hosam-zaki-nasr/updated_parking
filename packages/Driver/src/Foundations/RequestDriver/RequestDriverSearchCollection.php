@@ -9,7 +9,7 @@ class RequestDriverSearchCollection
     public static function searchRequestDrivers(
         $query_string = -1,
         $paginate = -1,
-        $per_page = SystemDefault::DEFAUL_PAGINATION_COUNT
+        $per_page = SystemDefault::DEFAULT_PAGINATION_COUNT
     ) {
         $requestDrivers = RequestDriverQueryCollection::searchAllRequestDrivers(
             $query_string

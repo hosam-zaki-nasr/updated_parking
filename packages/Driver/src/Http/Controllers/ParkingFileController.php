@@ -23,7 +23,7 @@ class ParkingFileController extends Controller
         $parkingFiles = ParkingFileSearchCollection::searchParkingFiles(
             $parking,
             $request->get('paginate') ?? -1,
-            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAUL_PAGINATION_COUNT
+            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAULT_PAGINATION_COUNT
         );
 
         return response()->paginated(ParkingFileResource::collection($parkingFiles));
@@ -34,7 +34,7 @@ class ParkingFileController extends Controller
         $parkingFiles = ParkingFileSearchCollection::searchParkingFiles(
             $parking,
             $request->get('paginate') ?? -1,
-            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAUL_PAGINATION_COUNT
+            $request->get('per_page') ? $request->get('per_page') : SystemDefault::DEFAULT_PAGINATION_COUNT
         );
 
         return response()->paginated(ParkingFileResource::collection($parkingFiles));

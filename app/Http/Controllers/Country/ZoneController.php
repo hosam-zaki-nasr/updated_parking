@@ -19,7 +19,7 @@ class ZoneController extends Controller
         $zones = ZoneSearchCollection::searchCountryZones(
             $country,
             -1,
-            $request->get('per_page') ?? SystemDefault::DEFAUL_PAGINATION_COUNT
+            $request->get('per_page') ?? SystemDefault::DEFAULT_PAGINATION_COUNT
         );
 
         return response()->paginated(ZoneMinifiedResource::collection($zones));
@@ -30,7 +30,7 @@ class ZoneController extends Controller
         $zones = ZoneSearchCollection::searchCountryZones(
             $country,
             $request->get('query_string') ?? -1,
-            $request->get('per_page') ?? SystemDefault::DEFAUL_PAGINATION_COUNT
+            $request->get('per_page') ?? SystemDefault::DEFAULT_PAGINATION_COUNT
         );
 
         return response()->paginated(ZoneMinifiedResource::collection($zones));
@@ -41,7 +41,7 @@ class ZoneController extends Controller
         $zones = ZoneSearchCollection::searchAllZones(
             $request->get('country_id') ?? -1,
             $request->get('query_string') ?? -1,
-            $request->get('per_page') ?? SystemDefault::DEFAUL_PAGINATION_COUNT
+            $request->get('per_page') ?? SystemDefault::DEFAULT_PAGINATION_COUNT
         );
 
         return response()->paginated(ZoneMinifiedResource::collection($zones));

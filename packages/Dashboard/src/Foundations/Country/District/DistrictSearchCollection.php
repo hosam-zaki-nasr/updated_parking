@@ -11,7 +11,7 @@ class DistrictSearchCollection
         Country $country,
         $query_string = -1,
         $paginate = -1,
-        $per_page = SystemDefault::DEFAUL_PAGINATION_COUNT
+        $per_page = SystemDefault::DEFAULT_PAGINATION_COUNT
     ) {
         $districts = DistrictQueryCollection::searchCountryDistricts(
             $country,
@@ -31,7 +31,7 @@ class DistrictSearchCollection
         $country_id,
         $query_string = -1,
         $paginate = -1,
-        $per_page = SystemDefault::DEFAUL_PAGINATION_COUNT
+        $per_page = SystemDefault::DEFAULT_PAGINATION_COUNT
     ) {
         $districts = DistrictQueryCollection::searchAllDistricts(
             $country_id,
